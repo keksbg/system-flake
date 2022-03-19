@@ -16,7 +16,6 @@
     wget
   ] ++ lib.optionals enableGUI [
     gparted
-    thunar
   ];
   environment.variables.EDITOR = "nvim";
   programs.adb.enable = true;
