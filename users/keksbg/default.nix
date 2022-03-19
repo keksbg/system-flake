@@ -37,5 +37,6 @@
         };
         home.file.".config/alacritty.yml".source = ../../res/alacritty.yml; 
         home.file.".config/easyeffects/output/eq.json".source = ../../res/easyeffects-eq.json;
+        home.file.".osu".source = config.lib.file.mkOutOfStoreSymlink /mnt/old/home/keksbg/.wine/drive_c/osu;
     };
 }
