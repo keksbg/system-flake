@@ -4,7 +4,7 @@
 	extraGroups = [ "adbusers" "audio" "video" "wheel" ];
 	shell = pkgs.zsh;
 	uid = 1001;
-	initialHashedPassword = "test";
+	initialHashedPassword = "$1$9fe23fad$.RFy1WSxpTm.7NVJutL48/";
     };
     home-manager.users.keksbg = { config, enableGUI, lib, pks, ...}: {
     	home = {
