@@ -15,7 +15,10 @@
 
     outputs = { self, nixpkgs, ... } @ inputs:
         let overlays = (import ./overlays)
-	    ++ [inputs.powercord-overlay.overlay];
+	    ++ [inputs.powercord-overlay.overlay]
+	    ++ [(final: prev: {
+		me = prev.callPackage ./packages { inherit inputs; } // { inherit inputs; };
+	    })];
 
 	mkSystem =
 	    nixpkgs: name: arch: enableGUI: nixpkgs.lib.nixosSystem {
