@@ -42,12 +42,21 @@ in
             device = "//192.168.1.22/public";
             fsType = "cifs";
             options = [
+                "nobootwait"
+                "nofail"
                 "uid=keksbg"
                 "noperm"
                 "guest"
             ];
         };
 
+        "/mnt/old" = {
+            device = "/dev/disk/by-uuid/9ebb5521-27c0-44b8-82b1-cd9a80edf257";
+            fsType = "ext4";
+            options = [
+              "defaults"
+              "nofail"
+            ];
+        };
     };
-
 }
