@@ -24,11 +24,12 @@
   };
   services.xserver = {
     enable = true;
-    autorun = false;
+    autorun = true;
     displayManager = {
       lightdm.enable = lib.mkForce false;
       startx.enable = true;
     };
+    videoDrivers = [ "nvidia" ];
     desktopManager.xterm.enable = false;
   };
 }
