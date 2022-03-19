@@ -42,7 +42,6 @@ in
             device = "//192.168.1.22/public";
             fsType = "cifs";
             options = [
-                "nobootwait"
                 "nofail"
                 "uid=keksbg"
                 "noperm"
