@@ -9,10 +9,13 @@
 	        useOSProber = lib.mkForce false;
 	    };
         };
+	zfs = {
+	    devNodes = "/dev/";
+	    enableUnstable = true;
+	};
 	initrd.supportedFilesystems = [ "zfs" ];
   	kernelModules = [ "kvm-intel" ];
 	supportedFilesystems = [ "zfs" ];
-	zfs.devNodes = "/dev/";
 	kernelPackages = lib.mkForce (pkgs.linuxPackagesFor pkgs.me.linux-lava);
     };
 }
