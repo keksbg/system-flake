@@ -19,6 +19,7 @@ in {
 	yt-dlp
     ] ++ lib.optionals enableGUI [
 	discord
+        easyeffects
         feh
         rofi
 	gnome.file-roller
