@@ -19,6 +19,7 @@ in {
 	yt-dlp
     ] ++ lib.optionals enableGUI [
 	discord
+        feh
         rofi
 	gnome.file-roller
 	gimp
