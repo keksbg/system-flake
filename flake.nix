@@ -7,7 +7,7 @@
 	nix-gaming.url = "github:fufexan/nix-gaming";
 
 	# overlays
-	linux-tkg = { url = "github:FroggingFamily/linux-tkg"; flake = false; };
+	linux-tkg = { url = "github:Frogging-Family/linux-tkg"; flake = false; };
 	powercord-overlay.url = "github:LavaDesu/powercord-overlay";
 	powercord-overlay.inputs.nixpkgs.follows = "nixpkgs";
 	rust-overlay.url = "github:oxalica/rust-overlay";

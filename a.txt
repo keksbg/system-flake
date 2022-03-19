@@ -1,0 +1,238 @@
+warning: Git tree '/home/nixos/flake' is dirty
+building the flake in git+file:///home/nixos/flake...
+warning: Git tree '/home/nixos/flake' is dirty
+error: undefined variable 'enableGUI'
+
+       at /mnt/nix/store/sip96b0rzshixyw2s07zhsrbms7yb5sn-source/users/keksbg/default.nix:23:24:
+
+           22|         zsh
+           23|     ] ++ lib.optionals enableGUI [
+             |                        ^
+           24|    theming
+
+       … while evaluating 'optionals'
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/lists.nix:270:5:
+
+          269|     # List to return if condition is true
+          270|     elems: if cond then elems else [];
+             |     ^
+          271|
+
+       … from call site
+
+       at /mnt/nix/store/sip96b0rzshixyw2s07zhsrbms7yb5sn-source/users/keksbg/default.nix:23:10:
+
+           22|    zsh
+           23|     ] ++ lib.optionals enableGUI [
+             |          ^
+           24|  theming
+
+       … while evaluating the attribute 'imports'
+
+       at /mnt/nix/store/sip96b0rzshixyw2s07zhsrbms7yb5sn-source/users/keksbg/default.nix:16:5:
+
+           15|
+           16|     imports = with modules.user; [
+             |     ^
+           17|       ./packages.nix
+
+       … while evaluating the attribute 'imports'
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/modules.nix:367:9:
+
+          366|         disabledModules = m.disabledModules or [];
+          367|         imports = m.require or [] ++ m.imports or [];
+             |         ^
+          368|         options = {};
+
+       … while evaluating 'imap1'
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/lists.nix:116:14:
+
+          115|   */
+          116|   imap1 = f: list: genList (n: f (n + 1) (elemAt list n)) (length list);
+             |              ^
+          117|
+
+       … from call site
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/modules.nix:308:73:
+
+          307|           };
+          308|         in parentFile: parentKey: initialModules: args: collectResults (imap1 (n: x:
+             |                                                                         ^
+          309|           let
+
+       … while evaluating the attribute 'disabled'
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/modules.nix:305:13:
+
+          304|           collectResults = modules: {
+          305|             disabled = concatLists (catAttrs "disabled" modules);
+             |             ^
+          306|             inherit modules;
+
+       … while evaluating the attribute 'disabled'
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/modules.nix:305:13:
+
+          304|           collectResults = modules: {
+          305|             disabled = concatLists (catAttrs "disabled" modules);
+             |             ^
+          306|             inherit modules;
+
+       … while evaluating the attribute 'disabled'
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/modules.nix:305:13:
+
+          304|           collectResults = modules: {
+          305|             disabled = concatLists (catAttrs "disabled" modules);
+             |             ^
+          306|             inherit modules;
+
+       … while evaluating anonymous lambda
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/modules.nix:327:31:
+
+          326|           disabledKeys = map moduleKey disabled;
+          327|           keyFilter = filter (attrs: ! elem attrs.key disabledKeys);
+             |                               ^
+          328|         in map (attrs: attrs.module) (builtins.genericClosure {
+
+       … from call site
+
+       … while evaluating 'filterModules'
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/modules.nix:323:36:
+
+          322|       # modules recursively. It returns the final list of unique-by-key modules
+          323|       filterModules = modulesPath: { disabled, modules }:
+             |                                    ^
+          324|         let
+
+       … from call site
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/modules.nix:334:7:
+
+          333|     in modulesPath: initialModules: args:
+          334|       filterModules modulesPath (collectStructuredModules unknownModule "" initialModules args);
+             |       ^
+          335|
+
+       … while evaluating anonymous lambda
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/modules.nix:333:37:
+
+          332|
+          333|     in modulesPath: initialModules: args:
+             |                                     ^
+          334|       filterModules modulesPath (collectStructuredModules unknownModule "" initialModules args);
+
+       … from call site
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/modules.nix:179:25:
+
+          178|       merged =
+          179|         let collected = collectModules
+             |                         ^
+          180|           (specialArgs.modulesPath or "")
+
+       … while evaluating 'reverseList'
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/lists.nix:393:17:
+
+          392|   */
+          393|   reverseList = xs:
+             |                 ^
+          394|     let l = length xs; in genList (n: elemAt xs (l - n - 1)) l;
+
+       … from call site
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/modules.nix:183:33:
+
+          182|           ({ inherit lib options config specialArgs; } // specialArgs);
+          183|         in mergeModules prefix (reverseList collected);
+             |                                 ^
+          184|
+
+       … while evaluating 'zipAttrsWithNames'
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/attrsets.nix:366:33:
+
+          365|   */
+          366|   zipAttrsWithNames = names: f: sets:
+             |                                 ^
+          367|     listToAttrs (map (name: {
+
+       … from call site
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/attrsets.nix:382:40:
+
+          381|   zipAttrsWith =
+          382|     builtins.zipAttrsWith or (f: sets: zipAttrsWithNames (concatMap attrNames sets) f sets);
+             |                                        ^
+          383|   /* Like `zipAttrsWith' with `(name: values: values)' as the function.
+
+       … while evaluating anonymous lambda
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/attrsets.nix:382:34:
+
+          381|   zipAttrsWith =
+          382|     builtins.zipAttrsWith or (f: sets: zipAttrsWithNames (concatMap attrNames sets) f sets);
+             |                                  ^
+          383|   /* Like `zipAttrsWith' with `(name: values: values)' as the function.
+
+       … from call site
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/modules.nix:449:9:
+
+          448|       byName = attr: f: modules:
+          449|         zipAttrsWith (n: concatLists)
+             |         ^
+          450|           (map (module: let subtree = module.${attr}; in
+
+       … while evaluating 'byName'
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/modules.nix:448:25:
+
+          447|       */
+          448|       byName = attr: f: modules:
+             |                         ^
+          449|         zipAttrsWith (n: concatLists)
+
+       … from call site
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/modules.nix:465:21:
+
+          464|       # an attrset 'name' => list of submodules that declare ‘name’.
+          465|       declsByName = byName "options" (module: option:
+             |                     ^
+          466|           [{ inherit (module) _file; options = option; }]
+
+       … while evaluating the attribute 'matchedOptions'
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/modules.nix:509:14:
+
+          508|     in {
+          509|       inherit matchedOptions;
+             |              ^
+          510|
+
+       … while evaluating 'mapAttrsRecursiveCond'
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/attrsets.nix:296:36:
+
+          295|   */
+          296|   mapAttrsRecursiveCond = cond: f: set:
+             |                                    ^
+          297|     let
+
+       … from call site
+
+       at /mnt/nix/store/f71alr07xb2swc37fiqjr5h416qcs6wr-source/lib/modules.nix:191:28:
+
+          190|           # For definitions that have an associated option
+          191|           declaredConfig = mapAttrsRecursiveCond (v: ! isOption v) (_: v: v.value) options;
+             |                            ^
+          192|

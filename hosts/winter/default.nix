@@ -1,4 +1,4 @@
-{ config, inpouts, modules, overlays, pkgs, ...}: {
+{ config, inputs, modules, overlays, pkgs, ...}: {
     networking.hostName = "winter";
     networking.hostId = "e7531249";
     system.stateVersion = "21.11";
@@ -11,7 +11,6 @@
 
 	audio
 	base
-	greetd
 	gui
 	input
 	kernel
