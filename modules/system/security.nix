@@ -2,7 +2,7 @@
   services.openssh = {
     enable = true;
     permitRootLogin = "no";
-    passwordAuthentication = "yes";
+    passwordAuthentication = true;
     forwardX11 = true;
 
     hostKeys = [
