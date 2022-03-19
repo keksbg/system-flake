@@ -33,7 +33,7 @@ in
 
     "/home/keksbg" = mkUserDataMount "home/keksbg";
 
-    fileSystems."/boot" =
+    "/boot" =
         { device = "/dev/disk/by-uuid/4864-A6DB";
             fsType = "vfat";
         };

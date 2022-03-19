@@ -1,3 +1,3 @@
-builtins.map (path: import pat) [
+builtins.map (path: import path) [
     ./discord.nix
 ]

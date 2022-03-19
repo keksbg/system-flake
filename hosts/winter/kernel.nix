@@ -1,11 +1,13 @@
 { config, lib, pkgs, ...}: {
     boot = {
-        efi.canTouchEfiVariables = true;
         loader = {
-            grub.enable = true;
-	    grub.efiSupport = true;
-	    grub.device = "nodev";
-	    grub.useOSProber = lib.mkForce false;
+            efi.canTouchEfiVariables = true;
+	    grub = {
+                enable = true;
+	        efiSupport = true;
+	        device = "nodev";
+	        useOSProber = lib.mkForce false;
+	    };
         };
 	initrd.supportedFilesystems = [ "zfs" ];
   	kernelModules = [ "kvm-intel" ];
