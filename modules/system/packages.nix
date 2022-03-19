@@ -1,6 +1,7 @@
 { config, enableGUI, lib, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     efibootmgr
+    cifs-utils
     git
     htop
     jq
