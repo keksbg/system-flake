@@ -1,5 +1,6 @@
 { config, inpouts, modules, overlays, pkgs, ...}: {
     networking.hostName = "winter";
+    networking.hostId = "e7531249";
     system.stateVersion = "21.11";
     time.timeZone = "Europe/Sofia";
 
