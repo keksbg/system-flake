@@ -13,7 +13,10 @@
 	    devNodes = "/dev/";
 	    enableUnstable = true;
 	};
-	initrd.supportedFilesystems = [ "zfs" ];
+	initrd = {
+	    supportedFilesystems = [ "zfs" ];
+  	    availableKernelModules = [ "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" "sr_mod" ];
+	};
   	kernelModules = [ "kvm-intel" ];
 	supportedFilesystems = [ "zfs" ];
 	# kernelPackages = lib.mkForce (pkgs.linuxPackagesFor pkgs.me.linux-lava);
