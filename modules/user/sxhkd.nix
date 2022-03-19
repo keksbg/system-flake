@@ -13,8 +13,7 @@ in {
       "super + d" = "rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans 8'";
 
       # Printscreen
-      "Print" = "maim -us | xclip -selection clipboard -t image/png";
-      "shift + Print" = "maim -u | xclip -selection clipboard -t image/png";
+      "{shift,_} + Print" = "maim -u{s,} | xclip -selection clipboard -t image/png";
 
       # Quick-kill picom
       "super + p" = "mpc toggle";

@@ -8,5 +8,4 @@ if command -v dbus-update-activation-environment > /dev/null 2>&1; then
 fi
 
 xrdb ${XDG_CONFIG_HOME}/xorg/xresources
-xrandr --output DP-0 --mode 1920x1080 --rate 144 --left-of --output HDMI-0
 exec ${XDG_CONFIG_HOME}/xorg/xsession

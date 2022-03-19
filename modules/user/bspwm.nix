@@ -16,6 +16,7 @@
     extraConfig = ''
       feh --no-fehbg --bg-fill ${config.xdg.configHome}/xorg/wallpaper.png
       systemctl --user restart polybar # home-manager loads this too early
+      xrandr --output DP-0 --mode 1920x1080 --refresh 144 --left-of HDMI-0
     '';
   };
 }
