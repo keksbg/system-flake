@@ -4,7 +4,7 @@
 	home-manager.url = "github:nix-community/home-manager";
 	nixos-hardware.url = "github:NixOS/nixos-hardware";
 	home-manager.inputs.nixpkgs.follows = "nixpkgs";
-	nix-gaming.url = "github:fufexan/nix-gaming";
+	nix-gaming.url = "github:fufexan/nix-gaming?rev=fd45bde30b59f0ac22eabbfff9dba1ccd7c8c76d";
 
 	# zsh plugins
 	zsh-abbr = { url = "github:olets/zsh-abbr"; flake = false; };
