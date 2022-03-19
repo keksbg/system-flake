@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "fast-syntax-highlighting": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1646018363,
+        "narHash": "sha256-WaXJT9wVUN/1hj81SCXyGLRt0ZgoarEsjy/gh3IpGhU=",
+        "owner": "zdharma-continuum",
+        "repo": "fast-syntax-highlighting",
+        "rev": "ef8ba84c3a76c768f49a0bdd2a620b2f53c2478a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zdharma-continuum",
+        "repo": "fast-syntax-highlighting",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "locked": {
         "lastModified": 1638122382,
@@ -184,15 +200,35 @@
         "type": "github"
       }
     },
+    "pure": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1645044543,
+        "narHash": "sha256-iuLi0o++e0PqK81AKWfIbCV0CTIxq2Oki6U2oEYsr68=",
+        "owner": "sindresorhus",
+        "repo": "pure",
+        "rev": "5b458ba5b75f49a8071d53c343f1a23631f7bced",
+        "type": "github"
+      },
+      "original": {
+        "owner": "sindresorhus",
+        "repo": "pure",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
+        "fast-syntax-highlighting": "fast-syntax-highlighting",
         "home-manager": "home-manager",
         "linux-tkg": "linux-tkg",
         "nix-gaming": "nix-gaming",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_2",
         "powercord-overlay": "powercord-overlay",
-        "rust-overlay": "rust-overlay"
+        "pure": "pure",
+        "rust-overlay": "rust-overlay",
+        "zsh-abbr": "zsh-abbr",
+        "zsh-history-substring-search": "zsh-history-substring-search"
       }
     },
     "rust-overlay": {
@@ -229,6 +265,38 @@
       "original": {
         "owner": "gytis-ivaskevicius",
         "repo": "flake-utils-plus",
+        "type": "github"
+      }
+    },
+    "zsh-abbr": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1641236044,
+        "narHash": "sha256-6T27TTD4V3nzx1D8vhMpn2FIodYtLkOBoi6J7GYNV6k=",
+        "owner": "olets",
+        "repo": "zsh-abbr",
+        "rev": "91280150cf8de09f84ab02c00fc04605400ea914",
+        "type": "github"
+      },
+      "original": {
+        "owner": "olets",
+        "repo": "zsh-abbr",
+        "type": "github"
+      }
+    },
+    "zsh-history-substring-search": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1627971553,
+        "narHash": "sha256-8kiPBtgsjRDqLWt0xGJ6vBBLqCWEIyFpYfd+s1prHWk=",
+        "owner": "zsh-users",
+        "repo": "zsh-history-substring-search",
+        "rev": "4abed97b6e67eb5590b39bcd59080aa23192f25d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zsh-users",
+        "repo": "zsh-history-substring-search",
         "type": "github"
       }
     }
