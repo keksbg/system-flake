@@ -2,8 +2,8 @@
   xsession.windowManager.bspwm = {
     enable = true;
     monitors = {
-        DP-1 = ["1" "2" "3" "4" "5"];
-	HDMI-1 = ["6" "7" "8" "9" "0"];
+        DP-0 = ["1" "2" "3" "4" "5"];
+	HDMI-0 = ["6" "7" "8" "9" "0"];
     };
     settings = {
       window_gap = 12;
