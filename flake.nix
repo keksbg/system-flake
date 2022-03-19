@@ -6,6 +6,12 @@
 	home-manager.inputs.nixpkgs.follows = "nixpkgs";
 	nix-gaming.url = "github:fufexan/nix-gaming";
 
+	# zsh plugins
+	zsh-abbr = { url = "github:olets/zsh-abbr"; flake = false; };
+	zsh-history-substring-search = { url = "github:zsh-users/zsh-history-substring-search"; flake = false; };
+	fast-syntax-highlighting = { url = "github:zdharma-continuum/fast-syntax-highlighting"; flake = false; };
+	pure = { url = "github:sindresorhus/pure"; flake = false; };
+
 	# overlays
 	linux-tkg = { url = "github:Frogging-Family/linux-tkg"; flake = false; };
 	powercord-overlay.url = "github:LavaDesu/powercord-overlay";
