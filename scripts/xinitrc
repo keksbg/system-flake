@@ -7,5 +7,6 @@ if command -v dbus-update-activation-environment > /dev/null 2>&1; then
     dbus-update-activation-environment DISPLAY XAUTHORITY
 fi
 
+easyeffects --gapplication-service &
 xrdb ${XDG_CONFIG_HOME}/xorg/xresources
 exec ${XDG_CONFIG_HOME}/xorg/xsession

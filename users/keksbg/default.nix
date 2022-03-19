@@ -36,5 +36,6 @@
 	    source = ../../scripts/osu;
         };
         home.file.".config/alacritty.yml".source = ../../res/alacritty.yml; 
+        home.file.".config/easyeffects/output/eq.json".source = ../../res/easyeffects-eq.json;
     };
 }
