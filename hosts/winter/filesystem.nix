@@ -11,31 +11,43 @@ in
 {
     fileSystems = {
         "/" = { 
-	    device = "none";
-	    fsType = "tmpfs";
-	};
-
-    "/nix" = mkNixMount "nix";
-
-    "/etc" = mkNixMount "etc";
-
-    "/var" = mkNixMount "var";
-
-    "/var/lib" = mkNixMount "var/lib";
-
-    "/var/log" = mkNixMount "var/log";
-
-    "/var/spool" = mkNixMount "var/spool";
-
-    "/home" = mkUserDataMount "home";
-
-    "/root" = mkUserDataMount "home/root";
-
-    "/home/keksbg" = mkUserDataMount "home/keksbg";
-
-    "/boot" =
-        { device = "/dev/disk/by-uuid/4864-A6DB";
-            fsType = "vfat";
+            device = "none";
+            fsType = "tmpfs";
         };
+
+        "/nix" = mkNixMount "nix";
+
+        "/etc" = mkNixMount "etc";
+
+        "/var" = mkNixMount "var";
+
+        "/var/lib" = mkNixMount "var/lib";
+
+        "/var/log" = mkNixMount "var/log";
+
+        "/var/spool" = mkNixMount "var/spool";
+
+        "/home" = mkUserDataMount "home";
+
+        "/root" = mkUserDataMount "home/root";
+
+        "/home/keksbg" = mkUserDataMount "home/keksbg";
+
+        "/boot" = { 
+            device = "/dev/disk/by-uuid/4864-A6DB";
+                fsType = "vfat";
+            };
+
+        "/mnt/pxmx" = {
+            device = "//192.168.1.22/public";
+            fsType = "cifs";
+            options = [
+                "uid=keksbg"
+                "noperm"
+                "guest"
+            ];
+        };
+
     };
+
 }
