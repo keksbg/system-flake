@@ -10,13 +10,16 @@ in {
     };
 
     home.packages = with pkgs; [
+        dconf
 	ffmpeg
 	gnupg
 	rnix-lsp
+        alacritty
 	unrar
 	yt-dlp
     ] ++ lib.optionals enableGUI [
 	discord
+        rofi
 	gnome.file-roller
 	gimp
 	maim
