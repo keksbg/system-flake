@@ -35,5 +35,6 @@
 	    executable = true;
 	    source = ../../scripts/osu;
         };
+        home.file.".config/alacritty.yml".source = ../../res/alacritty.yml; 
     };
 }
