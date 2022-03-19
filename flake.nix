@@ -41,7 +41,7 @@
 	        in
 		{
                     inherit (pkgs.me) linux-lava;
-		}
-	}
+		};
+	};
 
 }
