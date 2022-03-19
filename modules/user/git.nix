@@ -4,7 +4,7 @@
     userName = "Stella";
     userEmail = "jens300304@gmail.com";
     signing = {
-      key = "REPLACEMELATER";
+      key = "3407C727615FE1ED";
       signByDefault = true;
     };
     extraConfig = {
