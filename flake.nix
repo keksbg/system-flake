@@ -31,7 +31,7 @@
 	    };
 	in
 	{
-            nixosConfigurations,"winter" = mkSystem nixpkgs "winter" "x86_64-linux" true;
+            nixosConfigurations."winter" = mkSystem nixpkgs "winter" "x86_64-linux" true;
 	    packages."x86_64-linux" = 
 	        let
 		    pkgs = import nixpkgs {
