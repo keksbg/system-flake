@@ -3,6 +3,7 @@
 , inputs
 , kernelPatches
 , lib
+, pkgs
 , ...
 } @ args:
 
@@ -12,6 +13,7 @@ in buildLinux (args // {
   inherit (sources) src kernelPatches;
   version = "${sources.version}-tkg-Lava";
   isZen = true;
+  stdenv = pkgs.llvmPackages_13.stdenv;
   # TODO:
   # some stuff is set in pkgs/os-specific/linux/kernel/common-config.nix
   # but i have no idea how to change it
