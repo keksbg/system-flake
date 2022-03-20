@@ -20,6 +20,7 @@
 	./filesystem.nix
 	./kernel.nix
 	./networking.nix
+        ./zfs.nix
 
 	../../users/keksbg
     ];
