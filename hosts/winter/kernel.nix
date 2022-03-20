@@ -16,6 +16,9 @@
 	initrd = {
 	    supportedFilesystems = [ "zfs" ];
   	    availableKernelModules = [ "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" "sr_mod" "hid" "hid_generic" "evdev" "input_core" ];
+            postDeviceCommands = lib.mkAfter ''
+                zfs rollback -r rpool/root@blank
+            '';
 	};
   	kernelModules = [ "kvm-intel" ];
 	supportedFilesystems = [ "zfs" ];

@@ -10,10 +10,8 @@ let
 in
 {
     fileSystems = {
-        "/" = { 
-            device = "none";
-            fsType = "tmpfs";
-        };
+
+        "/" = mkNixMount "root";
 
         "/nix" = mkNixMount "nix";
 
