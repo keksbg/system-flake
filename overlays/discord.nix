@@ -10,7 +10,7 @@ self: super: {
             cp ${super.fetchurl {
                 url = "https://github.com/GooseMod/OpenAsar/releases/download/nightly/app.asar";
                 sha256 = "0r94674msglz1pwzbz9wzmn04sm57mfi3ayjnhswd14mjslclarl";
-            }} $out/opt/Discord/resources/app.asar
+            }} $out/opt/DiscordCanary/resources/app.asar
         '';
     });
 }
