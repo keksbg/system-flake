@@ -37,5 +37,7 @@ in {
 	inputs.nix-gaming.packages.x86_64-linux.osu-lazer-bin
 	winetricks
 	xclip
+        xfce.thunar
+        xfce.thunar-archive-plugin
     ];
 }
