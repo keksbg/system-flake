@@ -6,6 +6,9 @@ in {
   services.sxhkd = {
     enable = true;
     keybindings = {
+      # alacritty (Terminal)
+      "super + return" = "alacritty";
+
       # Dunst (Notification daemon)
       "super + grave" = "dunstctl history-pop";
 
