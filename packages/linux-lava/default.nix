@@ -70,6 +70,7 @@ in buildLinux (args // {
     SCHED_DEBUG = no;
     LATENCYTOP = no;
     DEBUG_PREEMPT = no;
+    DEBUG_INFO_BTF = no;
   };
   ignoreConfigErrors = true;
 } // (args.argsOverride or {}))

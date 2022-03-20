@@ -1,8 +1,8 @@
 { fetchFromGitHub, inputs, lib }:
 let
-  rc = "-rc5";
-  version = "5.17.0${rc}";
-  kernelHash = "0cy1m2ylvay4ai2ivy92cpxvck8ra4i99i65zsvfyjp3gbvy13gm";
+  rc = "";
+  version = "5.16.16${rc}";
+  kernelHash = "13qk6cjnjwgnxj25mphyv08pjf1sqz7bxxrr3fpl8gz3aghdd9yc";
   #kernelPatchHash = "044y7mmla0f73mky24vpvl8ba3warfr6im97s1231gjxican40v6";
 
   tkgPatches = [
@@ -12,9 +12,9 @@ let
     "0003-glitched-base"
     "0007-v${mm}-fsync1_via_futex_waitv"
     "0007-v${mm}-winesync"
-    "0009-prjc_v5.17-r0"
+    "0009-glitched-bmq"
     "0009-glitched-ondemand-bmq"
-    "0005-glitched-pds"
+    "0009-prjc_v${mm}-r0"
     "0012-misc-additions"
   ];
 
@@ -33,14 +33,14 @@ let
 in {
   inherit version;
 
+  #src = builtins.fetchurl {
+  #  url = "https://git.kernel.org/torvalds/t/linux-${version}${rc}.tar.gz";
+  #  sha256 = kernelHash;
+  #};
   src = builtins.fetchurl {
-    url = "https://git.kernel.org/torvalds/t/linux-${mm}${rc}.tar.gz";
+    url = "https://cdn.kernel.org/pub/linux/kernel/v${lib.versions.major version}.x/linux-${version}.tar.xz";
     sha256 = kernelHash;
   };
-  # src = builtins.fetchurl {
-  #   url = "https://cdn.kernel.org/pub/linux/kernel/v${lib.versions.major version}.x/linux-${mm}.tar.xz";
-  #   sha256 = kernelHash;
-  # };
 
   kernelPatches = [
     (patch ./si-manual-clocking.patch)
