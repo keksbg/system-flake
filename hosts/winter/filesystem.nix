@@ -58,4 +58,16 @@ in
             ];
         };
     };
+
+    swapDevices = [
+        {
+            device = "/dev/rpool/swap";
+            randomEncryption = {
+                cipher = "aes-xts-plain64";
+                enable = true;
+                source = "/dev/urandom";
+            };
+            options = [ "discard" ];
+        }
+    ];
 }
