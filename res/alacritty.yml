@@ -748,10 +748,12 @@
 key_bindings:
   - { key: V, mods: Alt,                                 action: Paste          }
   - { key: C, mods: Alt,                                 action: Copy           }
+  - { key: U, mods: Alt,                                 action: ScrollPageUp,  }
+  - { key: D, mods: Alt,                                 action: ScrollPageDown }
+  - { key: K, mods: Alt,                                 action: ScrollLineUp   }
+  - { key: J, mods: Alt,                                 action: ScrollLineDown }
   #- { key: L,         mods: Control,                    action: ClearLogNotice }
   #- { key: L,         mods: Control, mode: ~Vi|~Search, chars: "\x0c"          }
-  #- { key: PageUp,    mods: Shift,   mode: ~Alt,        action: ScrollPageUp,  }
-  #- { key: PageDown,  mods: Shift,   mode: ~Alt,        action: ScrollPageDown }
   #- { key: Home,      mods: Shift,   mode: ~Alt,        action: ScrollToTop,   }
   #- { key: End,       mods: Shift,   mode: ~Alt,        action: ScrollToBottom }
 
@@ -762,8 +764,6 @@ key_bindings:
   #- { key: I,                           mode: Vi|~Search, action: ToggleViMode            }
   #- { key: I,                           mode: Vi|~Search, action: ScrollToBottom          }
   #- { key: C,      mods: Control,       mode: Vi|~Search, action: ToggleViMode            }
-  #- { key: Y,      mods: Control,       mode: Vi|~Search, action: ScrollLineUp            }
-  #- { key: E,      mods: Control,       mode: Vi|~Search, action: ScrollLineDown          }
   #- { key: G,                           mode: Vi|~Search, action: ScrollToTop             }
   #- { key: G,      mods: Shift,         mode: Vi|~Search, action: ScrollToBottom          }
   #- { key: B,      mods: Control,       mode: Vi|~Search, action: ScrollPageUp            }
