@@ -17,6 +17,12 @@
 	powercord-overlay.url = "github:LavaDesu/powercord-overlay";
 	powercord-overlay.inputs.nixpkgs.follows = "nixpkgs";
 	rust-overlay.url = "github:oxalica/rust-overlay";
+
+        # powercord plugins
+        cutecord = { url = "github:powercord-community/cutecord"; flake = false; };
+        ghostbuster = { url = "github:powercord-community/ghostbuster"; flake = false; };
+        betterfriends = { url = "github:powercord-community/betterfriends"; flake = false; };
+        channel-typing = { url = "github:powercord-community/channel-typing"; flake = false; };
     };
 
   nixConfig = {

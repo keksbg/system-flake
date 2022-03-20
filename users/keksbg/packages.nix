@@ -1,7 +1,12 @@
 { config, enableGUI, inputs, pkgs, ... }:
 let
     discord = pkgs.discord-plugged.override {
-	plugins = [];
+      plugins = [
+          inputs.cutecord
+          inputs.ghostbuster
+          inputs.betterfriends
+          inputs.channel-typing
+      ];
 	themes = [];
     };
 in {

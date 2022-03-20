@@ -1,5 +1,53 @@
 {
   "nodes": {
+    "betterfriends": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1621236864,
+        "narHash": "sha256-bEI/IB8VKr5Ow0E9QcbH5TKAsHfNFOxD4ny1ztv60NU=",
+        "owner": "powercord-community",
+        "repo": "betterfriends",
+        "rev": "98c8a30d2c3553b055cfa73a286be9fc0980d071",
+        "type": "github"
+      },
+      "original": {
+        "owner": "powercord-community",
+        "repo": "betterfriends",
+        "type": "github"
+      }
+    },
+    "channel-typing": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1634895849,
+        "narHash": "sha256-wlbzg2zzFcwBGCa90DAKUEAtytQBc8kYAjzXGq1J6AM=",
+        "owner": "powercord-community",
+        "repo": "channel-typing",
+        "rev": "8e41b085410a5bb72ddf9f372c8957eed6d2cb82",
+        "type": "github"
+      },
+      "original": {
+        "owner": "powercord-community",
+        "repo": "channel-typing",
+        "type": "github"
+      }
+    },
+    "cutecord": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1644137839,
+        "narHash": "sha256-knPTgj8epeC9/OxrtVRP6hffLPqj4e+oSzAqOlG5fQA=",
+        "owner": "powercord-community",
+        "repo": "cutecord",
+        "rev": "c603792b85600d77b06d5a34d03feebad00575b3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "powercord-community",
+        "repo": "cutecord",
+        "type": "github"
+      }
+    },
     "fast-syntax-highlighting": {
       "flake": false,
       "locked": {
@@ -43,6 +91,22 @@
       "original": {
         "owner": "numtide",
         "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "ghostbuster": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1566458566,
+        "narHash": "sha256-ZwQVEXHnHbGKd3iGYmqku8iZO24z9VZmO2X3QsrOacQ=",
+        "owner": "powercord-community",
+        "repo": "ghostbuster",
+        "rev": "4c7cf839ab360cc4f1b3d5b84f96a934f9b6ea91",
+        "type": "github"
+      },
+      "original": {
+        "owner": "powercord-community",
+        "repo": "ghostbuster",
         "type": "github"
       }
     },
@@ -219,7 +283,11 @@
     },
     "root": {
       "inputs": {
+        "betterfriends": "betterfriends",
+        "channel-typing": "channel-typing",
+        "cutecord": "cutecord",
         "fast-syntax-highlighting": "fast-syntax-highlighting",
+        "ghostbuster": "ghostbuster",
         "home-manager": "home-manager",
         "linux-tkg": "linux-tkg",
         "nix-gaming": "nix-gaming",
