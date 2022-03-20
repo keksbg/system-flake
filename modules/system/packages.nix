@@ -1,6 +1,7 @@
 { config, enableGUI, lib, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     efibootmgr
+    ccache
     cifs-utils
     git
     htop
