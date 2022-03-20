@@ -24,6 +24,7 @@ in {
         rofi
 	gnome.file-roller
 	gimp
+        helvum
 	maim
 	me.tetrio-desktop
 	obs-studio
