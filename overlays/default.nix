@@ -3,4 +3,5 @@ builtins.map (path: import path) [
     ./material-icons.nix
     ./rofi.nix
     ./xinit.nix
+    ./nix-gaming.nix
 ]
