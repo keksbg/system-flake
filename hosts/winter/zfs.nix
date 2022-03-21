@@ -5,7 +5,7 @@
 	autoScrub.pools = [ "rpool" ];
 	autoSnapshot = {
 	    enable = true;
-	    frequent = 8;
+	    frequent = 4;
 	    monthly = 1;
 	};
     };
