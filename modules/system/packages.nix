@@ -3,6 +3,7 @@
     efibootmgr
     ccache
     cifs-utils
+    file
     git
     htop
     jq
