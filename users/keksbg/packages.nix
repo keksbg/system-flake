@@ -30,6 +30,7 @@ in {
 	gnome.file-roller
 	gimp
         helvum
+        lutris
 	maim
 	me.tetrio-desktop
 	obs-studio
