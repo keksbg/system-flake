@@ -22,6 +22,6 @@
 	};
   	kernelModules = [ "kvm-intel" ];
 	supportedFilesystems = [ "zfs" ];
-	# kernelPackages = lib.mkForce (pkgs.linuxPackagesFor pkgs.me.linux-lava);
+	kernelPackages = lib.mkForce (pkgs.linuxPackagesFor pkgs.me.linux-lava);
     };
 }
