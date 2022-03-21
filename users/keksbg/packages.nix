@@ -37,7 +37,7 @@ in {
         helvum
         lutris
 	maim
-	me.tetrio-desktop
+	me.tetrio-plus
 	obs-studio
 	openjdk17
 	pavucontrol
