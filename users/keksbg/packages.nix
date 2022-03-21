@@ -41,7 +41,7 @@ in {
 	transmission-gtk
 	inputs.nix-gaming.packages.x86_64-linux.wine-tkg
         # inputs.nix-gaming.packages.x86_64-linux.wine-osu
-	inputs.nix-gaming.packages.x86_64-linux.osu-lazer-bin
+	osu-lazer
 	winetricks
 	xclip
         xfce.thunar
