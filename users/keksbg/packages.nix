@@ -26,6 +26,7 @@ in {
 	rnix-lsp
         alacritty
 	unrar
+        unzip
 	yt-dlp
     ] ++ lib.optionals enableGUI [
 	discord
