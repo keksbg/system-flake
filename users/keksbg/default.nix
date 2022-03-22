@@ -6,7 +6,7 @@
 	uid = 1001;
 	initialHashedPassword = "$1$9fe23fad$.RFy1WSxpTm.7NVJutL48/";
     };
-    home-manager.users.keksbg = { config, enableGUI, lib, pks, ...}: {
+    home-manager.users.keksbg = { config, enableGUI, lib, pkgs, ...}: {
     	home = {
 	    username = "keksbg";
 	    homeDirectory = "/home/keksbg";
