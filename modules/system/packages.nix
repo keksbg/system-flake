@@ -3,6 +3,7 @@
     efibootmgr
     ccache
     cifs-utils
+    clang
     file
     git
     htop
