@@ -10,6 +10,8 @@
     jq
     libarchive
     lf
+    man-db
+    man-pages
     msr-tools
     ncdu
     neovim
