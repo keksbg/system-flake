@@ -4,6 +4,7 @@
     ccache
     cifs-utils
     clang
+    docker
     file
     git
     htop
@@ -16,6 +17,7 @@
     ncdu
     neovim
     nfs-utils
+    nix-index
     ntfs3g
     sshfs
     rsync
