@@ -27,6 +27,7 @@
   ];
   environment.variables.EDITOR = "nvim";
   programs.adb.enable = true;
+  virtualisation.docker.enable = true;
 }
 // (if !enableGUI then {} else {
   hardware.opentabletdriver.enable = true;
