@@ -2,7 +2,7 @@
     services.zfs = {
 	trim.enable = true;
 	autoScrub.enable = true;
-	autoScrub.pools = [ "rpool" ];
+	autoScrub.pools = [ "rpool" "bigdata" ];
 	autoSnapshot = {
 	    enable = true;
             hourly = 8;
