@@ -1,7 +1,7 @@
 { config, ... }:
 let
-    mkZfsMount = subpool: name: {
-        device = "rpool/${subpool}/${name}";
+    mkZfsMount = volume: name: {
+        device = "rpool/${volume}/${name}";
 	fsType = "zfs";
 	options = [ "zfsutil" ];
     };
