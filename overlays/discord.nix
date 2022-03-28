@@ -9,7 +9,7 @@ self: super: {
         postFixup = (old.postFixup or "") + ''
             cp ${super.fetchurl {
                 url = "https://github.com/GooseMod/OpenAsar/releases/download/nightly/app.asar";
-                sha256 = "1llz6idxljnbwi8gm5hc6xci4f04wb62v2b8hlq61z44dicpcfd6";
+                sha256 = "0s564aq1hmik42xbb3li8i4hhm83fgajwfdhbbfgvhbksxf6576b";
             }} $out/opt/DiscordCanary/resources/app.asar
         '';
     });
