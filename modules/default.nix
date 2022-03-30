@@ -32,7 +32,6 @@ in {
 	./user/gpg.nix
 	# ./user/emacs.nix
 	./user/neovim-minimal.nix
-	./user/packages-keksbg.nix
 	./user/polybar.nix
 	./user/theming.nix
 	./user/sessionVariables.nix
