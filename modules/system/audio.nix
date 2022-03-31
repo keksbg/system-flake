@@ -16,7 +16,8 @@ let
     };
     rate = toString int.rate;
   };
-in {
+in
+{
   sound.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -60,7 +61,7 @@ in {
           name = "libpipewire-module-portal";
           flags = [ "ifexists" "nofail" ];
         }
-        { name = "libpipewire-module-access"; args = {}; }
+        { name = "libpipewire-module-access"; args = { }; }
         { name = "libpipewire-module-adapter"; }
         { name = "libpipewire-module-link-factory"; }
         { name = "libpipewire-module-session-manager"; }

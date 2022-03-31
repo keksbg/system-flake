@@ -31,7 +31,7 @@
   programs.adb.enable = true;
   virtualisation.docker.enable = true;
 }
-// (if !enableGUI then {} else {
+  // (if !enableGUI then { } else {
   hardware.opentabletdriver.enable = true;
   programs.steam.enable = true;
   services.dbus.packages = [ pkgs.dconf pkgs.gcr ];

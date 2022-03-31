@@ -3,7 +3,8 @@ let
   historyScript = pkgs.writeShellScript "dunst_history.sh" ''
     echo "$(${pkgs.coreutils}/bin/date +%s):$DUNST_TIMESTAMP:$DUNST_APP_NAME:$DUNST_URGENCY:$DUNST_SUMMARY:$DUNST_BODY" >> ${config.xdg.dataHome}/dunst/history
   '';
-in {
+in
+{
   systemd.user.tmpfiles.rules = [ "d ${config.xdg.dataHome}/dunst - - - -" ];
 
   services.dunst = {

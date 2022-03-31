@@ -9,7 +9,8 @@
 
 let
   sources = callPackage ./sources.nix { inherit inputs; };
-in buildLinux (args // {
+in
+buildLinux (args // {
   inherit (sources) src kernelPatches;
   version = "${sources.version}-tkg-Lava";
   isZen = true;
@@ -75,4 +76,4 @@ in buildLinux (args // {
     DEBUG_INFO_BTF = no;
   };
   ignoreConfigErrors = true;
-} // (args.argsOverride or {}))
+} // (args.argsOverride or { }))

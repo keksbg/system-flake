@@ -2,7 +2,8 @@
 let
   super = "Mod4";
   alt = "Mod1";
-in {
+in
+{
   services.sxhkd = {
     enable = true;
     keybindings = {

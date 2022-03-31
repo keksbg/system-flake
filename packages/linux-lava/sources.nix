@@ -30,7 +30,8 @@ let
   #   };
   # };
   mm = lib.versions.majorMinor version;
-in {
+in
+{
   inherit version;
 
   #src = builtins.fetchurl {
@@ -45,9 +46,11 @@ in {
   kernelPatches = [
     (patch ./si-manual-clocking.patch)
   ]
-  ++ builtins.map (name: {
-    inherit name;
-    patch = "${inputs.linux-tkg}/linux-tkg-patches/${mm}/${name}.patch";
-  }) tkgPatches;
+  ++ builtins.map
+    (name: {
+      inherit name;
+      patch = "${inputs.linux-tkg}/linux-tkg-patches/${mm}/${name}.patch";
+    })
+    tkgPatches;
 
 }

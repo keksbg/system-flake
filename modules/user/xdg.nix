@@ -1,10 +1,12 @@
 { config, ... }:
 let
   genMimes = mimeTypes: builtins.listToAttrs (
-    builtins.map (mimeType: {
-      name = mimeType;
-      value = "firefox.desktop";
-    }) mimeTypes
+    builtins.map
+      (mimeType: {
+        name = mimeType;
+        value = "firefox.desktop";
+      })
+      mimeTypes
   );
 
   mimes = genMimes [
@@ -23,7 +25,8 @@ let
     "image/png" = "feh.desktop";
     "image/jpeg" = "feh.desktop";
   };
-in {
+in
+{
   xdg = {
     enable = true;
     mime.enable = true;

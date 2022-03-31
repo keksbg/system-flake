@@ -1,27 +1,27 @@
-{ config, inputs, modules, overlays, pkgs, ...}: {
-    networking.hostName = "winter";
-    networking.hostId = "e7531249";
-    system.stateVersion = "21.11";
-    time.timeZone = "Europe/Sofia";
+{ config, inputs, modules, overlays, pkgs, ... }: {
+  networking.hostName = "winter";
+  networking.hostId = "e7531249";
+  system.stateVersion = "21.11";
+  time.timeZone = "Europe/Sofia";
 
-    # agenix later
-    imports = with modules.system; [
-        inputs.home-manager.nixosModule
-	home-manager
+  # agenix later
+  imports = with modules.system; [
+    inputs.home-manager.nixosModule
+    home-manager
 
-	audio
-	base
-	gui
-	input
-	kernel
-	nix
-	packages
-	security
-	./filesystem.nix
-	./kernel.nix
-	./networking.nix
-        ./zfs.nix
+    audio
+    base
+    gui
+    input
+    kernel
+    nix
+    packages
+    security
+    ./filesystem.nix
+    ./kernel.nix
+    ./networking.nix
+    ./zfs.nix
 
-	../../users/keksbg
-    ];
+    ../../users/keksbg
+  ];
 }

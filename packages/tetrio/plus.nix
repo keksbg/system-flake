@@ -1,8 +1,7 @@
-{
-  symlinkJoin,
-  stdenvNoCC,
-  tetrio-desktop,
-  unzip
+{ symlinkJoin
+, stdenvNoCC
+, tetrio-desktop
+, unzip
 }:
 let
   version = "0.23.7";
@@ -22,7 +21,8 @@ let
     '';
     dontInstall = true;
   };
-in tetrio-desktop.overrideAttrs(old: {
+in
+tetrio-desktop.overrideAttrs (old: {
   pname = "tetrio-desktop-plus";
   version = old.version + "+${version}";
 

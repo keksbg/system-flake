@@ -1,6 +1,5 @@
-{
-  callPackage,
-  inputs
+{ callPackage
+, inputs
 }: rec {
   linux-lava = callPackage ./linux-lava { inherit inputs; };
   tetrio-desktop = callPackage ./tetrio/base.nix { };
