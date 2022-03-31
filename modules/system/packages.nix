@@ -20,9 +20,11 @@
     nix-index
     ntfs3g
     sshfs
+    ripgrep
     rsync
     wget
   ] ++ lib.optionals enableGUI [
+    emacs
     gparted
   ];
   environment.variables.EDITOR = "nvim";

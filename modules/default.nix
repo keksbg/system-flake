@@ -28,9 +28,9 @@ in {
     user = mkAttrsFromPaths [
 	./user/bspwm.nix
 	./user/dunst.nix
+        ./user/emacs.nix
 	./user/git.nix
 	./user/gpg.nix
-	# ./user/emacs.nix
 	./user/neovim-minimal.nix
 	./user/polybar.nix
 	./user/theming.nix

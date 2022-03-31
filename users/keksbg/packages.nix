@@ -31,6 +31,7 @@ in {
     ] ++ lib.optionals enableGUI [
 	discord
         easyeffects
+        emacs
         feh
         rofi
 	gnome.file-roller
