@@ -30,6 +30,7 @@ in
   ];
   user = mkAttrsFromPaths [
     ./user/bspwm.nix
+    ./user/direnv.nix
     ./user/dunst.nix
     ./user/emacs.nix
     ./user/git.nix

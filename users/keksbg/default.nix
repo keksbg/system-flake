@@ -16,19 +16,20 @@
 
     imports = with modules.user; [
       ./packages.nix
-      sessionVariables
+      direnv
       git
       gpg
       neovim-minimal
+      sessionVariables
       zsh
     ] ++ lib.optionals enableGUI [
-      theming
-      xdg
+      bspwm
       dunst
       polybar
-      xorg
       sxhkd
-      bspwm
+      theming
+      xdg
+      xorg
     ];
 
     home.file.".doom.d" = {
@@ -47,5 +48,6 @@
     home.file.".osu".source = config.lib.file.mkOutOfStoreSymlink /mnt/data/games/osu;
     home.file.".local/share/osu".source = config.lib.file.mkOutOfStoreSymlink /mnt/data/games/osu-lazer;
     home.file."Games".source = config.lib.file.mkOutOfStoreSymlink /mnt/data/games;
+    home.file."Projects".source = config.lib.file.mkOutOfStoreSymlink /mnt/data/private/Projects;
   };
 }
