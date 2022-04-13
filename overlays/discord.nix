@@ -5,12 +5,5 @@ self: super: {
       url = "https://dl-canary.discordapp.net/apps/linux/${version}/discord-canary-${version}.tar.gz";
       sha256 = "0hynv9nh6lcfy44yxs33686iyzvjrnczxkppb75c6a4wa7m5l8hz";
     };
-  }).overrideAttrs (old: {
-    postFixup = (old.postFixup or "") + ''
-      cp ${super.fetchurl {
-          url = "https://github.com/GooseMod/OpenAsar/releases/download/nightly/app.asar";
-          sha256 = "17raqpfxpj7s7q7zg63w6lx49jnbr713bj9np0477p0ly30ncbmp";
-      }} $out/opt/DiscordCanary/resources/app.asar
-    '';
   });
 }
