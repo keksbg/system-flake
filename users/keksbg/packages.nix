@@ -12,6 +12,7 @@ let
 
   osu-lazer-bin = inputs.nix-gaming.packages.x86_64-linux.osu-lazer-bin.override {
     pipewire_latency = "64/48000";
+    gmrun_enable = false;
   };
 
 in
