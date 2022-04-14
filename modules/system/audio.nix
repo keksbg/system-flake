@@ -66,10 +66,6 @@ in
         { name = "libpipewire-module-link-factory"; }
         { name = "libpipewire-module-session-manager"; }
       ];
-      "stream.properties" = {
-        "node.latency" = "${str.quantum.min}/${str.rate}";
-        "resample.quality" = 1;
-      };
     };
     config.pipewire-pulse = {
       "context.modules" = [
@@ -99,10 +95,6 @@ in
           };
         }
       ];
-      "stream.properties" = {
-        "node.latency" = "${str.quantum.min}/${str.rate}";
-        "resample.quality" = 1;
-      };
     };
   };
 }
