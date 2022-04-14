@@ -1,8 +1,8 @@
 { fetchFromGitHub, inputs, lib }:
 let
   rc = "";
-  version = "5.16.16${rc}";
-  kernelHash = "13qk6cjnjwgnxj25mphyv08pjf1sqz7bxxrr3fpl8gz3aghdd9yc";
+  version = "5.17.3${rc}";
+  kernelHash = "0b0nb807r2pwrifc7yk0p9q6cm472ahggfaix6yiqzmqcvisil1j";
   #kernelPatchHash = "044y7mmla0f73mky24vpvl8ba3warfr6im97s1231gjxican40v6";
 
   tkgPatches = [
