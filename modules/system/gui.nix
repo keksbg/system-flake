@@ -10,6 +10,7 @@
     };
     fonts = with pkgs; [
       cascadia-code
+      fira-code
       font-awesome
       font-awesome_4
       hanazono
