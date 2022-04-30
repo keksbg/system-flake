@@ -35,10 +35,12 @@ in
     easyeffects
     emacs
     feh
-    rofi
-    gnome.file-roller
     gimp
+    gnome.file-roller
     helvum
+    # inputs.nix-gaming.packages.x86_64-linux.wine-tkg
+    inputs.nix-gaming.packages.x86_64-linux.wine-osu
+    keepassxc
     lutris
     maim
     me.tetrio-desktop-plus
@@ -46,10 +48,9 @@ in
     openjdk17
     pavucontrol
     polymc
+    rofi
     tor-browser-bundle-bin
     transmission-gtk
-    # inputs.nix-gaming.packages.x86_64-linux.wine-tkg
-    inputs.nix-gaming.packages.x86_64-linux.wine-osu
     osu-lazer-bin
     winetricks
     xclip
