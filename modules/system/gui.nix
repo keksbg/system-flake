@@ -5,7 +5,7 @@
       defaultFonts = {
         serif = [ "NotoSerif" ];
         sansSerif = [ "NotoSans" ];
-        monospace = [ "CascadiaCode" ];
+        monospace = [ "FiraCode" ];
       };
     };
     fonts = with pkgs; [
