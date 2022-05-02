@@ -33,5 +33,8 @@
     videoDrivers = [ "nvidia" ];
     desktopManager.xterm.enable = false;
   };
-  hardware.opengl.enable = true;
+  hardware.opengl = { 
+    enable = true;
+    driSupport32Bit = true;
+  };
 }
