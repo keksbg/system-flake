@@ -1,4 +1,5 @@
-{ config, enableGUI, lib, pkgs, ... }: {
+{ config, enableGUI, lib, pkgs, ... }: lib.mkMerge [
+  {
   environment.systemPackages = with pkgs; [
     efibootmgr
     ccache
@@ -23,17 +24,19 @@
     ripgrep
     rsync
     wget
-  ] ++ lib.optionals enableGUI [
-    emacs
-    gparted
   ];
   environment.variables.EDITOR = "nvim";
   programs.adb.enable = true;
   virtualisation.docker.enable = true;
   services.udev.packages = [ pkgs.android-udev-rules ];
 }
-  // (if !enableGUI then { } else {
+(lib.mkIf enableGUI {
+  environment.systemPackages = with pkgs; [
+    emacs
+    gparted
+  ];
   hardware.opentabletdriver.enable = true;
   programs.steam.enable = true;
   services.dbus.packages = [ pkgs.dconf pkgs.gcr ];
 })
+]
