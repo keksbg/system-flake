@@ -30,6 +30,7 @@
   environment.variables.EDITOR = "nvim";
   programs.adb.enable = true;
   virtualisation.docker.enable = true;
+  services.udev.packages = [ pkgs.android-udev-rules ];
 }
   // (if !enableGUI then { } else {
   hardware.opentabletdriver.enable = true;
