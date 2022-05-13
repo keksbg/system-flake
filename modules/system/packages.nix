@@ -37,6 +37,7 @@
   ];
   hardware.opentabletdriver.enable = true;
   programs.steam.enable = true;
+  programs.droidcam.enable = true;
   services.dbus.packages = [ pkgs.dconf pkgs.gcr ];
 })
 ]
