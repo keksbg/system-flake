@@ -20,6 +20,7 @@
         zfs rollback -r rpool/nixos/root@blank
       '';
     };
+    extraModulePackages = [ config.boot.kernelPackages.v4l2loopback ];
     kernelModules = [ "kvm-amd" "v4l2loopback" ];
     supportedFilesystems = [ "zfs" ];
     kernelPackages = lib.mkForce (pkgs.linuxPackagesFor pkgs.me.linux-lava);
