@@ -14,6 +14,7 @@
       font-awesome
       font-awesome_4
       hanazono
+      iosevka
       material-icons
       noto-fonts
       noto-fonts-cjk
