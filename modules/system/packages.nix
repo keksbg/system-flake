@@ -20,15 +20,19 @@
     nfs-utils
     nix-index
     ntfs3g
-    sshfs
     ripgrep
     rsync
+    sshfs
+    virt-manager
     wget
   ];
   environment.variables.EDITOR = "nvim";
   programs.adb.enable = true;
-  virtualisation.docker.enable = true;
   services.udev.packages = [ pkgs.android-udev-rules ];
+  virtualisation = {
+    docker.enable = true;
+    libvirtd.enable = true;
+  };
 }
 (lib.mkIf enableGUI {
   environment.systemPackages = with pkgs; [

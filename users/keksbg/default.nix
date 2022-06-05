@@ -1,7 +1,7 @@
 { config, lib, modules, pkgs, ... }: {
   users.users.keksbg = {
     isNormalUser = true;
-    extraGroups = [ "adbusers" "audio" "video" "wheel" "docker" ];
+    extraGroups = [ "adbusers" "audio" "video" "wheel" "docker" "libvirtd" ];
     shell = pkgs.zsh;
     uid = 1001;
     initialHashedPassword = "$1$9fe23fad$.RFy1WSxpTm.7NVJutL48/";
