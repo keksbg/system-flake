@@ -38,6 +38,7 @@
   environment.systemPackages = with pkgs; [
     emacs
     gparted
+    thunderbird
   ];
   hardware.opentabletdriver.enable = true;
   programs.steam.enable = true;
