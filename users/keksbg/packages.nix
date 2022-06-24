@@ -35,6 +35,7 @@ in
     easyeffects
     emacs
     feh
+    fuse-overlayfs
     gimp
     gnome.file-roller
     helvum
