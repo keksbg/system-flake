@@ -2,9 +2,9 @@
   programs.git = {
     enable = true;
     userName = "Stella";
-    userEmail = "jens300304@gmail.com";
+    userEmail = "stellarinfinity@riseup.net";
     signing = {
-      key = "3407C727615FE1ED";
+      key = "3D6DCA5B6F2C2A7A";
       signByDefault = true;
     };
     extraConfig = {
