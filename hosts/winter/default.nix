@@ -17,10 +17,11 @@
     nix
     packages
     security
+
     ./filesystem.nix
     ./kernel.nix
     ./networking.nix
-    ./zfs.nix
+    ./btrfs.nix
 
     ../../users/keksbg
   ];

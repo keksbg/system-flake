@@ -9,19 +9,19 @@
         useOSProber = lib.mkForce false;
       };
     };
-    zfs = {
-      devNodes = "/dev/";
-      enableUnstable = true;
-    };
     initrd = {
-      supportedFilesystems = [ "zfs" ];
+      luks.devices."btrfs" = {
+        device = "/dev/disk/by-uuid/063972fb-4dd0-40b8-b0bb-083a9a834515";
+        postOpenCommands = ''
+          mkdir /tmpmnt
+          mount /dev/mapper/btrfs /tmpmnt
+          btrfs subvol delete root
+          btrfs subvol snapshot blank root
+          umount /tmpmnt && rm -rf /tmpmnt
+        '';
+      };
       availableKernelModules = [ "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" "sr_mod" "hid" "hid_generic" "evdev" "input_core" ];
-      postDeviceCommands = lib.mkAfter ''
-        zfs rollback -r rpool/root@blank
-      '';
     };
     kernelModules = [ "kvm-intel" ];
-    supportedFilesystems = [ "zfs" ];
-    kernelPackages = lib.mkForce (pkgs.linuxPackagesFor pkgs.me.linux-lava);
   };
 }

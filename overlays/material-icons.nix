@@ -8,12 +8,12 @@ self: super: {
       rev = version;
 
       postFetch = ''
-        tar xf $downloadedFile --strip=1
         mkdir -p $out/share/fonts/opentype $out/share/fonts/truetype
-        cp font/*.ttf $out/share/fonts/truetype
-        cp font/*.otf $out/share/fonts/opentype
+        mv $out/font/*.ttf $out/share/fonts/truetype
+        mv $out/font/*.otf $out/share/fonts/opentype
+	rm -rf $out/{android,font,ios,png,src,symbols,update,variablefont,.gitignore,LICENSE,README.md}
       '';
-      sha256 = "05g5b8dn8vkjv98lmfgbd92wb5i8cfgc9j5f9ai86xl4r58yx10a";
+      sha256 = "sha256-CoTuUcmEdoOiSq7IxJ5jKJbFRWrruUpR2nJuZBta5RU=";
 
       meta = with super.lib; {
         description = "System status icons by Google, featuring material design";
