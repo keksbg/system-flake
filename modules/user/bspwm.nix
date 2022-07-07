@@ -2,8 +2,7 @@
   xsession.windowManager.bspwm = {
     enable = true;
     monitors = {
-      DP-0 = [ "1" "2" "3" "4" "5" ];
-      HDMI-0 = [ "6" "7" "8" "9" "0" ];
+      DP-0 = [ "1" "2" "3" "4" "5" "6" "7" "8" "9" "0" ];
     };
     settings = {
       window_gap = 12;
@@ -16,7 +15,7 @@
     extraConfig = ''
       feh --no-fehbg --bg-fill ${config.xdg.configHome}/xorg/wallpaper.png
       systemctl --user restart polybar # home-manager loads this too early
-      xrandr --output DP-0 --mode 1920x1080 --refresh 144 --primary --left-of HDMI-0
+      xrandr --output DP-0 --mode 1650x1050
     '';
   };
 }
