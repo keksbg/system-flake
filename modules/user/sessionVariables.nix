@@ -23,5 +23,15 @@
 
     WINEPREFIX = "${config.xdg.dataHome}/wine64";
     WINEARCH = "win64";
+
+    # SDL2 stuff
+    SDL_VIDEODRIVER = "wayland";
+
+    # QT:
+    QT_QPA_PLATFORM = "wayland-egl";
+    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+
+    # Firefox
+    MOZ_ENABLE_WAYLAND = "1";
   };
 }

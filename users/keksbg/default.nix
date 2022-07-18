@@ -23,13 +23,9 @@
       sessionVariables
       zsh
     ] ++ lib.optionals enableGUI [
-      bspwm
       dunst
-      polybar
-      sxhkd
       theming
       xdg
-      xorg
     ];
 
     home.file.".doom.d" = {
@@ -37,9 +33,11 @@
       recursive = true;
     };
 
-    home.file.".local/bin/osu" = {
-      executable = true;
-      source = ../../scripts/osu;
+    home.file.".config/sway/wallpaper.webp".source = ../../res/wallpaper.webp;
+    home.file.".config/sway/config".source = ../../res/sway.conf;
+    home.file.".config/waybar" = {
+      source = ../../res/waybar;
+      recursive = true;
     };
 
     home.file.".config/alacritty.yml".source = ../../res/alacritty.yml;

@@ -16,11 +16,4 @@
       package = pkgs.materia-theme;
     };
   };
-
-  home.pointerCursor = {
-    name = "Yaru";
-    package = pkgs.yaru-theme;
-    size = 16;
-    x11.enable = true;
-  };
 }

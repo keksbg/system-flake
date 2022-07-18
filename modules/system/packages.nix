@@ -1,17 +1,17 @@
 { config, enableGUI, lib, pkgs, ... }: lib.mkMerge [
   {
   environment.systemPackages = with pkgs; [
-    efibootmgr
     ccache
     cifs-utils
     clang
     docker
+    efibootmgr
     file
     git
     htop
     jq
-    libarchive
     lf
+    libarchive
     man-db
     man-pages
     msr-tools
@@ -20,6 +20,7 @@
     nfs-utils
     nix-index
     ntfs3g
+    qt5.qtwayland
     ripgrep
     rsync
     sshfs

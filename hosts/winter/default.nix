@@ -12,11 +12,11 @@
     audio
     base
     gui
-    input
     kernel
     nix
     packages
     security
+    sway
 
     ./filesystem.nix
     ./kernel.nix

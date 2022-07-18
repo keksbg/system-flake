@@ -27,21 +27,18 @@ in
     ./system/nix.nix
     ./system/packages.nix
     ./system/security.nix
+    ./system/sway.nix
   ];
   user = mkAttrsFromPaths [
-    ./user/bspwm.nix
     ./user/direnv.nix
     ./user/dunst.nix
     ./user/emacs.nix
     ./user/git.nix
     ./user/gpg.nix
     ./user/neovim-minimal.nix
-    ./user/polybar.nix
-    ./user/theming.nix
     ./user/sessionVariables.nix
-    ./user/sxhkd.nix
+    ./user/theming.nix
     ./user/xdg.nix
-    ./user/xorg.nix
     ./user/zsh.nix
   ];
 }

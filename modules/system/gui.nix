@@ -24,17 +24,7 @@
       unifont
     ];
   };
-  services.xserver = {
-    enable = true;
-    autorun = true;
-    displayManager = {
-      lightdm.enable = lib.mkForce false;
-      startx.enable = true;
-    };
-    videoDrivers = [ "nvidia" ];
-    desktopManager.xterm.enable = false;
-  };
-  hardware.opengl = { 
+  hardware.opengl = {
     enable = true;
     driSupport32Bit = true;
   };
