@@ -1,27 +1,27 @@
 { stdenv
-, boost
 , bison
-, double-conversion
+, boost
 , cmake
-, lib
-, git
+, double-conversion
 , fetchFromGitHub
 , fmt_8
 , fuse3
 , gflags
+, git
 , glog
+, gtest
 , jemalloc
+, lib
 , libarchive
-, libdwarf
 , libevent
 , libunwind
 , lz4
 , openssl
+, pkg-config
 , ronn
 , xxHash
 , xz
 , zstd
-, pkgconfig
 }:
 
 stdenv.mkDerivation rec {
@@ -44,47 +44,67 @@ stdenv.mkDerivation rec {
     git -c user.name=root -c user.email=root@localhost tag "v${version}" -m "v${version}"
   '';
 
-  # ...but the files are still kinda ugly, so let's make the data prettier for wherever it gets used ;)
+  # ...but the files are still kinda ugly, so let's make the
+  # data prettier for wherever it gets used ;)
   postConfigure = ''
     sed -i \
       -e 's/\(PRJ_GIT_REV = \).*/\1"${src.rev}";/' \
       -e 's/\(PRJ_GIT_DESC = \).*/\1"${version}";/' \
       -e 's/\(PRJ_GIT_BRANCH = \).*/\1"${src.rev}";/' \
-      -e 's/\(PRJ_GIT_ID = \).*/\1"${version} from Nixpkgs :)";/' \
+      -e 's/\(PRJ_GIT_ID = \).*/\1"v${version}";/' \
       ../src/dwarfs/version.cpp
   '';
 
   cmakeFlags = [
     "-DPREFER_SYSTEM_ZSTD=ON"
     "-DPREFER_SYSTEM_XXHASH=ON"
+    "-DPREFER_SYSTEM_GTEST=ON"
+
+    "-DWITH_LEGACY_FUSE=ON"
+    "-DWITH_TESTS=ON"
   ];
 
   nativeBuildInputs = [
     bison
     cmake
-    ronn
-    fmt_8
     git
-    boost.dev
-    libevent.dev
-    libdwarf.dev
-    pkgconfig
+    pkg-config
+    ronn
   ];
 
   buildInputs = [
-    fuse3
-    openssl
+    # dwarfs
     boost
-    jemalloc
-    xxHash
+    fmt_8
+    fuse3
+    libarchive
     lz4
+    xxHash
     xz
     zstd
-    libarchive
-    libunwind
-    fmt_8
-    glog
-    gflags
+
+    # folly (fsr not all dependencies?)
     double-conversion
+    gflags
+    glog
+    jemalloc
+    libevent
+    libunwind
+    openssl
   ];
+
+  doCheck = true;
+  checkInputs = [ gtest ];
+  # this fails inside of the sandbox due to missing access
+  # to the FUSE device
+  GTEST_FILTER = "-tools.everything";
+
+  meta = with lib; {
+    description = "A fast high compression read-only file system";
+    homepage = "https://github.com/mhx/dwarfs";
+    license = licenses.gpl3Plus;
+    maintainers = [ maintainers.keksbg ];
+    platforms = platforms.linux;
+  };
+
 }
