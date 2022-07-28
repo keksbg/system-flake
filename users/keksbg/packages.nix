@@ -46,7 +46,11 @@ in
     maim
     me.dwarfs
     me.tetrio-desktop-plus
-    obs-studio
+    (wrapOBS {
+      plugins = with obs-studio-plugins; [
+        wlrobs
+      ];
+    })
     openjdk17
     pavucontrol
     polymc
