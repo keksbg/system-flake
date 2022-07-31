@@ -26,7 +26,6 @@ in
     ffmpeg
     gnupg
     rnix-lsp
-    alacritty
     unrar
     unzip
     yt-dlp
@@ -42,6 +41,7 @@ in
     # inputs.nix-gaming.packages.x86_64-linux.wine-tkg
     inputs.nix-gaming.packages.x86_64-linux.wine-osu
     keepassxc
+    kitty
     lutris
     maim
     me.dwarfs
