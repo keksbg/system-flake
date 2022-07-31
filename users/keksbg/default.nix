@@ -42,7 +42,8 @@
       source = ../../scripts/osu;
     };
 
-    home.file.".config/alacritty.yml".source = ../../res/alacritty.yml;
+    home.file.".config/kitty/kitty.conf".source = ../../res/kitty.conf;
+    home.file.".config/kitty/kitty-theme.conf".source = "${pkgs.kitty-themes}/themes/dark_pride.conf";
     home.file.".config/easyeffects/output/eq.json".source = ../../res/easyeffects-eq.json;
 
     home.file.".osu".source = config.lib.file.mkOutOfStoreSymlink /mnt/data/games/osu;

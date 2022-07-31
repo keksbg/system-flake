@@ -7,8 +7,8 @@ in
   services.sxhkd = {
     enable = true;
     keybindings = {
-      # alacritty (Terminal)
-      "super + return" = "alacritty";
+      # kitty (Terminal)
+      "super + enter" = "kitty";
 
       # Dunst (Notification daemon)
       "super + grave" = "dunstctl history-pop";
