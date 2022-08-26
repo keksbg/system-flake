@@ -44,7 +44,7 @@ in
     kitty
     lutris
     maim
-    me.dwarfs
+    dwarfs
     me.tetrio-desktop-plus
     (wrapOBS {
       plugins = with obs-studio-plugins; [
