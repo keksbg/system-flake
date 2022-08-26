@@ -44,7 +44,7 @@ in
     keepassxc
     lutris
     maim
-    me.dwarfs
+    dwarfs
     me.tetrio-desktop-plus
     obs-studio
     openjdk17
