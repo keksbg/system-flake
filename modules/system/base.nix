@@ -21,4 +21,6 @@
   nix.registry.config.flake = inputs.self;
   nix.registry.nixpkgs.flake = inputs.nixpkgs;
   nix.registry.shells.flake = inputs.self;
+
+  services.udisks2.enable = true;
 }
