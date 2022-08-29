@@ -15,6 +15,7 @@
     input
     kernel
     nix
+    network
     packages
     security
     ./filesystem.nix

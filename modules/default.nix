@@ -24,6 +24,7 @@ in
     ./system/home-manager.nix
     ./system/input.nix
     ./system/kernel.nix
+    ./system/network.nix
     ./system/nix.nix
     ./system/packages.nix
     ./system/security.nix
