@@ -14,6 +14,7 @@
     gui
     kernel
     nix
+    network
     packages
     security
     sway
