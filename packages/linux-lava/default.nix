@@ -74,6 +74,8 @@ buildLinux (args // {
     LATENCYTOP = no;
     DEBUG_PREEMPT = no;
     DEBUG_INFO_BTF = no;
+
+    CONFIG_LRU_CACHE = module;
   };
   ignoreConfigErrors = true;
 } // (args.argsOverride or { }))

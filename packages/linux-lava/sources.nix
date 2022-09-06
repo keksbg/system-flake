@@ -1,8 +1,8 @@
 { fetchFromGitHub, inputs, lib }:
 let
   rc = "";
-  version = "5.17.12${rc}";
-  kernelHash = "0yr8xfds5l1s3lk8qk67mgy0l4yh2jfvjc7xwrfws3ci020ss9a2";
+  version = "5.18.19${rc}";
+  kernelHash = "1mc8zhiw0v7fka64mydpdrxkrvy0jyqggq5lghw3pyqj2wjrpw6z";
   #kernelPatchHash = "044y7mmla0f73mky24vpvl8ba3warfr6im97s1231gjxican40v6";
 
   tkgPatches = [
@@ -14,7 +14,8 @@ let
     "0007-v${mm}-winesync"
     "0009-glitched-bmq"
     "0009-glitched-ondemand-bmq"
-    "0009-prjc_v${mm}-r0"
+    "0009-prjc_v${mm}-r2"
+    "0010-lru_${mm}"
     "0012-misc-additions"
   ];
 
@@ -44,7 +45,7 @@ in
   };
 
   kernelPatches = [
-    (patch ./si-manual-clocking.patch)
+    #(patch ./si-manual-clocking.patch)
   ]
   ++ builtins.map
     (name: {
