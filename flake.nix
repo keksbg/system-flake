@@ -13,7 +13,7 @@
     pure = { url = "github:sindresorhus/pure"; flake = false; };
 
     # overlays
-    linux-tkg = { url = "github:Frogging-Family/linux-tkg"; flake = false; };
+    linux-tkg = { url = "github:Frogging-Family/linux-tkg?rev=093d74d417617d7805f22b57ce326ab8357a1661"; flake = false; };
     powercord-overlay.url = "github:LavaDesu/powercord-overlay";
     powercord-overlay.inputs.nixpkgs.follows = "nixpkgs";
     rust-overlay.url = "github:oxalica/rust-overlay";
