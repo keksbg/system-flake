@@ -53,7 +53,7 @@ in
     })
     openjdk17
     pavucontrol
-    polymc
+    prismlauncher
     rofi
     tor-browser-bundle-bin
     transmission-gtk
