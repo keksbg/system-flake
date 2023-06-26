@@ -21,6 +21,7 @@
         '';
       };
       availableKernelModules = [ "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" "sr_mod" "hid" "hid_generic" "evdev" "input_core" ];
+      kernelModules = [ "amdgpu" ];
     };
     kernelModules = [ "kvm-intel" ];
   };
