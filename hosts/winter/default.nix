@@ -9,7 +9,6 @@
     inputs.home-manager.nixosModule
     home-manager
 
-    audio
     base
     gui
     kernel
