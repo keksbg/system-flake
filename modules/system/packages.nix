@@ -29,6 +29,7 @@
   ];
   environment.variables.EDITOR = "nvim";
   programs.adb.enable = true;
+  programs.zsh.enable = true;
   services.udev.packages = [ pkgs.android-udev-rules ];
   virtualisation = {
     docker.enable = true;
