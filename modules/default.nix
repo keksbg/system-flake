@@ -18,7 +18,6 @@ let
 in
 {
   system = mkAttrsFromPaths [
-    ./system/audio.nix
     ./system/base.nix
     ./system/gui.nix
     ./system/home-manager.nix
