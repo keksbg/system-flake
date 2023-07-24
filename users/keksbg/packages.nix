@@ -49,6 +49,7 @@ in
     (wrapOBS {
       plugins = with obs-studio-plugins; [
         wlrobs
+        obs-vkcapture
       ];
     })
     openjdk17
