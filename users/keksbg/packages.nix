@@ -23,7 +23,7 @@ in
 
   home.packages = with pkgs; [
     dconf
-    ffmpeg
+    ffmpeg_6-full
     gnupg
     rnix-lsp
     unrar
