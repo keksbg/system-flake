@@ -10,6 +10,7 @@
     };
     fonts = with pkgs; [
       cascadia-code
+      cozette
       fira-code
       font-awesome
       font-awesome_4
